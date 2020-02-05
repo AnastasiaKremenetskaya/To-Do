@@ -11,23 +11,27 @@
     export default {
         name: 'app',
         components: {
-            TodoList
+            TodoList //Reference to the To-do list component in the components property
         },
         data() {
             return {
                 todos: [{
+                    id: 1,
                     title: 'Todo A',
                     project: 'Project A',
                     done: false,
                 }, {
+                    id: 2,
                     title: 'Todo B',
                     project: 'Project B',
                     done: true,
                 }, {
+                    id: 3,
                     title: 'Todo C',
                     project: 'Project C',
                     done: false,
                 }, {
+                    id:4,
                     title: 'Todo D',
                     project: 'Project D',
                     done: false,
