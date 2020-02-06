@@ -1,17 +1,29 @@
 <template>
     <div id="app">
         <img alt="Vue logo" src="./assets/logo.png">
+        <CreateTodo v-on:click="addTodo"/>
         <TodoList v-bind:todos="todos"/>
     </div>
 </template>
 
 <script>
     import TodoList from './components/TodoList.vue'
+    import CreateTodo from "@/components/CreateTodo";
 
     export default {
         name: 'app',
         components: {
-            TodoList //Reference to the To-do list component in the components property
+            TodoList, //Reference to the To-do list component in the components property
+            CreateTodo
+        },
+        methods: {
+            addTodo(title, project) {
+                this.todos.push({
+                    title,
+                    project,
+                    done: false
+                });
+            }
         },
         data() {
             return {
